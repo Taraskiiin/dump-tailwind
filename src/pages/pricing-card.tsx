@@ -62,7 +62,25 @@ export default function PricingCard() {
 						<div className='p-8 mx-3 mb-3 rounded-b-xl bg-slate-800'>
 							<div className='flex flex-col space-y-2'>
 								{item.sweets.map((el) => (
-									<div key={el}></div>
+									<div
+										key={el}
+										className='flex justify-start items-center gap-2'
+									>
+										<svg
+											xmlns='http://www.w3.org/2000/svg'
+											className='w-5 h-5'
+											viewBox='0 0 24 24'
+											stroke-width='2'
+											stroke='currentColor'
+											fill='none'
+											stroke-linecap='round'
+											stroke-linejoin='round'
+										>
+											<path stroke='none' d='M0 0h24v24H0z' fill='none' />
+											<path d='M5 12l5 5l10 -10' />
+										</svg>
+										<span className='text-sm text-left'>{el}</span>
+									</div>
 								))}{' '}
 							</div>
 						</div>
