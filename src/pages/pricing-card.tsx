@@ -42,7 +42,12 @@ export default function PricingCard() {
 		<section className='flex items-center justify-center min-h-screen bg-slate-800 overflow-hidden'>
 			<div className='flex flex-col my-6 space-y-6 md:space-y-0 md:space-x-6 md:flex-row md:my-0'>
 				{list.map((item) => (
-					<div key={item.id} className='bg-slate-700 rounded-xl text-white'>
+					<div
+						key={item.id}
+						className={`${
+							item.tariffName === 'Standard' ? 'bg-violet-600' : 'bg-slate-700'
+						}  rounded-xl text-white`}
+					>
 						<div className='p-8 mx-3 mt-3 rounded-t-xl bg-slate-800'>
 							<div className='text-center uppercase'>{item.tariffName}</div>
 							<h2 className='mt-10 font-serif text-5xl text-center'>
@@ -58,7 +63,13 @@ export default function PricingCard() {
 								</Link>
 							</div>
 						</div>
-						<div className='border-t border-slate-700' />
+						<div
+							className={`border-t ${
+								item.tariffName === 'Standard'
+									? 'border-violet-600'
+									: ' border-slate-700'
+							} `}
+						/>
 						<div className='p-8 mx-3 mb-3 rounded-b-xl bg-slate-800'>
 							<div className='flex flex-col space-y-2'>
 								{item.sweets.map((el) => (
