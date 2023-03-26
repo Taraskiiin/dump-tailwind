@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.home-link {
+	display: inline-block;
+	padding: 15px 30px;
+	color: #f50a0a;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: 4px;
+	text-decoration: none;
+	font-size: 18px;
+	overflow: hidden;
+	transition: 0.1s;
+	cursor: pointer;
+}
+
+.home-link:hover {
+	color: #fff;
+	background-color: #f50a0a;
+	box-shadow: 0 0 10px #f50a0a, 0 0 20px #f50a0a, 0 0 30px #f50a0a;
+	transition-delay: 0.1s;
+}
